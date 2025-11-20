@@ -1,14 +1,15 @@
 import {
     Dialog,
     DialogPanel,
+    DialogProps,
     DialogTitle,
     Transition,
     TransitionChild,
 } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
-export interface ModalProps extends React.HtmlHTMLAttributes<HTMLElement> {
-    children: string
+export interface ModalProps extends DialogProps {
+    children: React.ReactNode
     title: string
     isOpen: boolean
     onClose: () => void
@@ -17,7 +18,7 @@ export interface ModalProps extends React.HtmlHTMLAttributes<HTMLElement> {
 const Modal = ({ children, title, isOpen, onClose }: ModalProps) => {
     return (
         <Transition appear show={isOpen}>
-            <Dialog className="" onClose={onClose}>
+            <Dialog className="relative z-10" onClose={onClose}>
                 <TransitionChild
                     enter="ease-out duration-300"
                     enterFrom="opacity-0"
@@ -26,10 +27,10 @@ const Modal = ({ children, title, isOpen, onClose }: ModalProps) => {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <div className="" />
+                    <div className="fixed inset-0 bg-black/25" />
                 </TransitionChild>
-                <div className="">
-                    <div className="">
+                <div className="fixed inset-0 overflow-y-auto">
+                    <div className="flex items-center justify-center min-h-full p-4">
                         <TransitionChild
                             enter="ease-out duration-300"
                             enterFrom="opacity-0 scale-95"
@@ -38,13 +39,16 @@ const Modal = ({ children, title, isOpen, onClose }: ModalProps) => {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                         >
-                            <DialogPanel className="">
-                                <div className="">
-                                    <DialogTitle as="h3" className="">
+                            <DialogPanel className="flex flex-col w-full max-w-md p-7 gap-5 rounded-lg bg-white overflow-hidden transform transition-all">
+                                <div className="flex items-center justify-between">
+                                    <DialogTitle
+                                        as="h3"
+                                        className="text-lg font-semibold"
+                                    >
                                         {title}
                                     </DialogTitle>
                                     <button onClick={onClose}>
-                                        <XMarkIcon className="" />
+                                        <XMarkIcon className="w-5 h-5 text-disabled" />
                                     </button>
                                 </div>
                                 {children}
