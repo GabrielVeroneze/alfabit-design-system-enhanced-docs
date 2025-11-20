@@ -1,0 +1,37 @@
+import { Canvas, Controls, Meta, Primary } from '@storybook/addon-docs/blocks'
+import * as NoticeStories from './Notice.stories'
+
+<Meta of={NoticeStories} />
+
+# Notificação
+
+Este é um componente de notificação, responsável por exibir mensagens breves que comunicam estados do sistema ao usuário.
+
+### Alerta
+
+<Canvas of={NoticeStories.Alert} />
+
+### Sucesso
+
+<Canvas of={NoticeStories.Success} />
+
+### Erro
+
+<Canvas of={NoticeStories.Error} />
+
+### Com conteúdo adicional (children)
+
+<Canvas of={NoticeStories.WithChildren} />
+
+### Com Botão de Fechar
+
+<Canvas of={NoticeStories.Closable} />
+
+### Completo (children + onClose)
+
+<Canvas of={NoticeStories.Complete} />
+
+## Documentação Interativa:
+
+<Primary />
+<Controls />

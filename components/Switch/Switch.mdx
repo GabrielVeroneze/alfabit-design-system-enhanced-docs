@@ -1,0 +1,45 @@
+import { Canvas, Controls, Meta, Primary } from '@storybook/addon-docs/blocks'
+import * as SwitchStories from './Switch.stories'
+
+<Meta of={SwitchStories} />
+
+# Switch
+
+Este é um componente de switch, utilizado para alternar entre dois estados, como ativado e desativado.
+
+### Comum Ativado
+
+<Canvas of={SwitchStories.CommonEnabled} />
+
+### Comum Desativado
+
+<Canvas of={SwitchStories.CommonNotEnabled} />
+
+### Ícone Ativado
+
+<Canvas of={SwitchStories.ContractEnabled} />
+
+### Ícone Desativado
+
+<Canvas of={SwitchStories.ContractNotEnabled} />
+
+### Comum Ativado — Desabilitado
+
+<Canvas of={SwitchStories.CommonEnabledDisabled} />
+
+### Comum Desativado — Desabilitado
+
+<Canvas of={SwitchStories.CommonNotEnabledDisabled} />
+
+### Ícone Ativado — Desabilitado
+
+<Canvas of={SwitchStories.ContractEnabledDisabled} />
+
+### Ícone Desativado — Desabilitado
+
+<Canvas of={SwitchStories.ContractNotEnabledDisabled} />
+
+## Documentação Interativa:
+
+<Primary />
+<Controls include={['variant', 'defaultEnable', 'disabled']} />

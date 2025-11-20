@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta, Primary } from '@storybook/addon-docs/blocks'
+import * as AvatarStories from './Avatar.stories'
+
+<Meta of={AvatarStories} />
+
+# Avatar
+
+Este é um componente de avatar, utilizado para exibir uma imagem personalizada, caso fornecida, representando um usuário ou uma entidade. Caso contrário, é exibido um ícone padrão.
+
+### Avatar Pequeno
+
+<Canvas of={AvatarStories.AvatarSmall} />
+
+### Avatar Médio
+
+<Canvas of={AvatarStories.AvatarMedium} />
+
+### Avatar Grande
+
+<Canvas of={AvatarStories.AvatarLarge} />
+
+### Avatar com Imagem
+
+<Canvas of={AvatarStories.AvatarWithImage} />
+
+## Documentação Interativa:
+
+<Primary />
+<Controls />
