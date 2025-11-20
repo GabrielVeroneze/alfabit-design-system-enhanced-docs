@@ -4,13 +4,29 @@ import Modal, { ModalProps } from './Modal'
 import Button from '@/components/Button/Button'
 import Typography from '@/components/Typography/Typography'
 
-const ModalStoryInfo = (args: ModalProps) => {
-    const [isOpen, setIsOpen] = useState(args.isOpen)
+const meta = {
+    title: 'Molecules/Modal',
+    component: Modal,
+    decorators: [
+        (Story) => (
+            <div style={{ margin: '1rem' }}>
+                <Story />
+            </div>
+        ),
+    ],
+} satisfies Meta<ModalProps>
 
-    return (
-        <>
-            <Button onClick={() => setIsOpen(true)}>Abrir Modal</Button>
-            <Modal {...args} isOpen={isOpen} onClose={() => setIsOpen(false)}>
+export default meta
+
+type Story = StoryObj<typeof meta>
+
+export const ModalInfo: Story = {
+    args: {
+        title: 'Modal Info',
+        isOpen: false,
+        onClose: () => {},
+        children: (
+            <>
                 <Typography>
                     Today, every company I talk to wants to implement a design
                     system from scratch. Unfortunately, the details of a design
@@ -22,32 +38,25 @@ const ModalStoryInfo = (args: ModalProps) => {
                     listed below to learn best practices and make informed
                     design decisions on their projects.
                 </Typography>
-                <div className=" flex flex-col gap-3">
-                    <Button onClick={() => setIsOpen(false)}>
-                        Primary Button
-                    </Button>
-                    <Button
-                        variant="secondary"
-                        onClick={() => setIsOpen(false)}
-                    >
-                        Secondary Button
-                    </Button>
+                <div className="flex flex-col gap-3">
+                    <Button>Primary Button</Button>
+                    <Button variant="secondary">Secondary Button</Button>
                 </div>
-            </Modal>
-        </>
-    )
-}
+            </>
+        ),
+    },
+    render: (args: ModalProps) => {
+        const [isOpen, setIsOpen] = useState(args.isOpen)
 
-const meta = {
-    title: 'Molecules/Modal',
-    component: Modal,
-    argTypes: {},
-} satisfies Meta<ModalProps>
-
-export default meta
-
-type Story = StoryObj<typeof meta>
-
-export const Default: Story = {
-    args: {},
+        return (
+            <>
+                <Button onClick={() => setIsOpen(true)}>Abrir Modal</Button>
+                <Modal
+                    {...args}
+                    isOpen={isOpen}
+                    onClose={() => setIsOpen(false)}
+                />
+            </>
+        )
+    },
 }
