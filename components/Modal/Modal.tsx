@@ -27,7 +27,7 @@ const Modal = ({ children, title, isOpen, onClose }: ModalProps) => {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <div className="fixed inset-0 bg-black/25" />
+                    <div className="fixed inset-0 bg-black/25 blur-default" />
                 </TransitionChild>
                 <div className="fixed inset-0 overflow-y-auto">
                     <div className="flex items-center justify-center min-h-full p-4">
@@ -39,15 +39,18 @@ const Modal = ({ children, title, isOpen, onClose }: ModalProps) => {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                         >
-                            <DialogPanel className="flex flex-col w-full max-w-md p-7 gap-5 rounded-lg bg-white overflow-hidden transform transition-all">
+                            <DialogPanel className="flex flex-col w-[480px] p-7 gap-5 rounded-lg bg-light overflow-hidden transform transition-all shadow-md">
                                 <div className="flex items-center justify-between">
                                     <DialogTitle
                                         as="h3"
-                                        className="text-lg font-semibold"
+                                        className="text-lg font-bold"
                                     >
                                         {title}
                                     </DialogTitle>
-                                    <button onClick={onClose}>
+                                    <button
+                                        className="cursor-pointer"
+                                        onClick={onClose}
+                                    >
                                         <XMarkIcon className="w-5 h-5 text-disabled" />
                                     </button>
                                 </div>
