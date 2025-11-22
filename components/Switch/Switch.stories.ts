@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/nextjs-vite'
 import Switch, { SwitchProps } from './Switch'
 
 const meta = {
-    title: 'Molecules/Switch',
+    title: 'Design System/Molecules/Switch',
     component: Switch,
     argTypes: {
         defaultEnable: {

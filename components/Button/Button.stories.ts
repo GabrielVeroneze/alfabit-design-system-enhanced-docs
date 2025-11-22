@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/nextjs-vite'
 import Button, { ButtonProps } from './Button'
 
 const meta = {
-    title: 'Molecules/Button',
+    title: 'Design System/Molecules/Button',
     component: Button,
     argTypes: {
         children: {

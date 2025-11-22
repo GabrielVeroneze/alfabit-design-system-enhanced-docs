@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/nextjs-vite'
 import Dropdown, { DropdownProps } from './Dropdown'
 
 const meta = {
-    title: 'Molecules/Dropdown',
+    title: 'Design System/Molecules/Dropdown',
     component: Dropdown,
     decorators: [
         (Story) => (

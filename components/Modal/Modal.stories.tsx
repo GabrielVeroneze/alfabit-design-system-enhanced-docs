@@ -5,7 +5,7 @@ import Button from '@/components/Button/Button'
 import Typography from '@/components/Typography/Typography'
 
 const meta = {
-    title: 'Molecules/Modal',
+    title: 'Design System/Molecules/Modal',
     component: Modal,
     decorators: [
         (Story) => (

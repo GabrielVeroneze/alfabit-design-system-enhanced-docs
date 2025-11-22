@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/nextjs-vite'
 import Link, { LinkProps } from './Link'
 
 const meta = {
-    title: 'Molecules/Link',
+    title: 'Design System/Molecules/Link',
     component: Link,
     argTypes: {
         children: {

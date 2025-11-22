@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/nextjs-vite'
 import TextBlock, { TextBlockProps } from './TextBlock'
 
 const meta = {
-    title: 'Molecules/TextBlock',
+    title: 'Design System/Molecules/TextBlock',
     component: TextBlock,
     argTypes: {
         type: {

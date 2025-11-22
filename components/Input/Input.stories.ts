@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/nextjs-vite'
 import Input, { InputProps } from './Input'
 
 const meta = {
-    title: 'Molecules/Input',
+    title: 'Design System/Molecules/Input',
     component: Input,
     argTypes: {},
 } satisfies Meta<InputProps>
