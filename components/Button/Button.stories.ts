@@ -14,6 +14,9 @@ const meta = {
         className: {
             type: 'string',
         },
+        onClick: {
+            action: 'clicked',
+        },
     },
 } satisfies Meta<ButtonProps>
 
