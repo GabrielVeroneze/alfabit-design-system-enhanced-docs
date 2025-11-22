@@ -12,7 +12,7 @@ const boxClassMap = {
     primary: 'bg-primary',
     secondary: 'bg-quaternary',
     dark: 'bg-dark',
-    alert: 'bg-blue-200 text-blue-200',
+    alert: 'bg-yellow-200 text-yellow-200',
     success: 'bg-green-200 text-green-200',
     error: 'bg-red-200 text-red-200',
 }
