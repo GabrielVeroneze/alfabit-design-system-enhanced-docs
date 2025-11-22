@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/nextjs-vite'
 import Box, { BoxProps } from './Box'
 
 const meta = {
-    title: 'Atoms/Box',
+    title: 'Design System/Atoms/Box',
     component: Box,
     argTypes: {
         children: {

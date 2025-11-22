@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/nextjs-vite'
 import Divider, { DividerProps } from './Divider'
 
 const meta = {
-    title: 'Atoms/Divider',
+    title: 'Design System/Atoms/Divider',
     component: Divider,
     argTypes: {
         children: {

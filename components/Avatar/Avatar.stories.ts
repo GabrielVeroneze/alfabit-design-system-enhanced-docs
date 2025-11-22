@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/nextjs-vite'
 import Avatar, { AvatarProps } from './Avatar'
 
 const meta = {
-    title: 'Atoms/Avatar',
+    title: 'Design System/Atoms/Avatar',
     component: Avatar,
     argTypes: {
         image: {
